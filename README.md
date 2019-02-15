@@ -1,4 +1,4 @@
-# requestspwn
+# requestspwn [![pypi](https://img.shields.io/pypi/v/requestspwn.svg?style=flat)](https://pypi.org/project/requestspwn/)
 Drop-in replacement for the `requests` library with random user agents as default. Designed for Attack/Defense CTF competitions.
 
 ## Installation
