@@ -9,6 +9,7 @@ from requests import post as _post
 from requests import put as _put
 from requests import patch as _patch
 from requests import delete as _delete
+from requests import options as _options
 
 
 def load_useragents(name):
@@ -107,3 +108,13 @@ def delete(url, user_agents="latest", **kwargs):
     """
     kwargs = set_user_agent(user_agents, kwargs)
     return _delete(url, **kwargs)
+
+
+def options(url, user_agents="latest", **kwargs):
+    """Wrap the `options` method, use a random user agent.
+
+    Additional parameters:
+      user_agents -- An iterable of strings (the user agents), or a string (to load from a default dataset)
+    """
+    kwargs = set_user_agent(user_agents, kwargs)
+    return _options(url, **kwargs)
